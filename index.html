@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Rock Paper Scissors</title>
+
+  </head>
+  <body>
+  </body>
+  <script>
+    const options = ['rock', 'paper', 'scissors'];
+
+    function getComputerChoice() {
+      let chosenOption = Math.floor(Math.random() * options.length);
+      return options[chosenOption];  
+    }
+    
+    function playRound(playerSelection, computerSelection) {
+      let playerOption = playerSelection.toLowerCase();
+      if(playerOption == 'rock') {
+        if(computerSelection == 'rock') {
+          return 'It\'s a tie! Rock to Rock!';
+        }
+        else if(computerSelection == 'paper') {
+          return 'You lose! Rock loses to Paper!';
+        }
+        else if(computerSelection == 'scissors') {
+          return 'You win! Rock beats Scissors!';
+        }
+      }
+      else if(playerOption == 'paper') {
+        if(computerSelection == 'paper') {
+          return 'It\'s a tie! Paper to Paper!';
+        }
+        else if(computerSelection == 'scissors') {
+          return 'You lose! Paper loses to Scissors!';
+        }
+        else if(computerSelection == 'Rock') {
+          return 'You win! Paper beats Rock!';
+        }        
+      }
+      else if(playerOption == 'scissors') {
+        if(computerSelection == 'scissors') {
+          return 'It\'s a tie! Scissors to Scissors!';
+        }
+        else if(computerSelection == 'rock') {
+          return 'You lose! Scissors loses to Rock!';
+        }
+        else if(computerSelection == 'paper') {
+          return 'You win! Scissors beats Paper!';
+        }
+      }
+      else {
+        return 'Not an option!';
+      }
+      const player = 'rock';
+      const computer = getComputerChoice();
+      console.log(playRound(player, computer));
+    }
+  </script>
+</html>
