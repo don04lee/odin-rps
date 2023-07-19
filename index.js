@@ -1,3 +1,11 @@
+const buttons = document.querySelectorAll('button');
+buttons.forEach(button => {
+  button.addEventListener('click', function(e) {
+    const playerOption = this.id;
+    console.log(playRound(playerOption, getComputerChoice()));
+  });
+});
+
 const options = ['rock', 'paper', 'scissors'];
 
 function getComputerChoice() {
@@ -6,8 +14,7 @@ function getComputerChoice() {
 }
 
 function playRound(playerSelection, computerSelection) {
-  let playerOption = playerSelection.toLowerCase();
-  if(playerOption == 'rock') {
+  if(playerSelection == 'rock') {
     if(computerSelection == 'rock') {
       return 'tie';
     }
@@ -18,7 +25,7 @@ function playRound(playerSelection, computerSelection) {
       return 'win';
     }
   }
-  else if(playerOption == 'paper') {
+  else if(playerSelection == 'paper') {
     if(computerSelection == 'paper') {
       return 'tie';
     }
@@ -29,7 +36,7 @@ function playRound(playerSelection, computerSelection) {
       return 'win';
     }        
   }
-  else if(playerOption == 'scissors') {
+  else if(playerSelection == 'scissors') {
     if(computerSelection == 'scissors') {
       return 'tie';
     }
@@ -50,6 +57,7 @@ function game() {
   let playerScore = 0;
   let computerScore = 0;
   
+  /* 
   while(playerScore < 3 && computerScore < 3) {
 
     let player = prompt("Choose rock, paper, or scissors");
@@ -86,5 +94,6 @@ function game() {
   else {
     console.log('You lose!');
   }
+  */
 }
 game();
