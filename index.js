@@ -95,6 +95,7 @@ function endGame() {
   question.textContent = 'Would you like to play again?';
 
   resetButton = document.createElement('button');
+  resetButton.classList.add('again');
   resetButton.textContent = 'YES';
   endgame.appendChild(resetButton);
 

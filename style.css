@@ -44,6 +44,19 @@ body {
   gap: 10px;
 }
 
+.again {
+  color: white;
+  background-color: red;
+  border: none;
+  border-radius: 25px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 30px;
+  margin: 0;
+  padding: 20px;
+  width: 100px;
+}
+
 #container {
   display: flex;
   justify-content: center;
